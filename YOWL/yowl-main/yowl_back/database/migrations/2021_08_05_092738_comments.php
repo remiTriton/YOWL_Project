@@ -17,13 +17,15 @@ class Comments extends Migration
             $table->id();
             $table->timestamps();
             $table->string('content');
+            $table->integer('amazon_id')->nullable();
+            $table->integer('wallmart_id')->nullable();
+            $table->integer('target_id')->nullable();
             
         });
         Schema::table('comments', function (Blueprint $table) {
             $table->foreignId('user_id')->constrained();
         });
     }
-
 
     /**
      * Reverse the migrations.
