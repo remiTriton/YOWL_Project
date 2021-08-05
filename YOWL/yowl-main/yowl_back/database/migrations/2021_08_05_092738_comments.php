@@ -20,6 +20,8 @@ class Comments extends Migration
             $table->integer('amazon_id')->nullable();
             $table->integer('wallmart_id')->nullable();
             $table->integer('target_id')->nullable();
+            $table->integer('like');
+
             
         });
         Schema::table('comments', function (Blueprint $table) {
