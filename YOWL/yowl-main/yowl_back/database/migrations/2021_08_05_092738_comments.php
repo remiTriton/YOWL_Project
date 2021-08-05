@@ -17,6 +17,9 @@ class Comments extends Migration
             $table->id();
             $table->timestamps();
             $table->string('content');
+            $table->amazon_id();
+            $table->wallmart_id();
+            $table->target_id();
             
         });
         Schema::table('comments', function (Blueprint $table) {
