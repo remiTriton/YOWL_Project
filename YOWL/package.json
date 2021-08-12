@@ -1,0 +1,15 @@
+{
+  "name": "shielded-peak-70241",
+  "version": "1.0.0",
+  "description": "helloworld",
+  "main": "mainn.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "exemple",
+    "heroku"
+  ],
+  "author": "remi triton",
+  "license": "ISC"
+}
