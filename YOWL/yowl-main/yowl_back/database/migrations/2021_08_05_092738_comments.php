@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Comments extends Migration
+class Comment extends Migration
 {
     /**
      * Run the migrations.
@@ -17,9 +17,8 @@ class Comments extends Migration
             $table->id();
             $table->timestamps();
             $table->string('content');
-            $table->integer('amazon_id')->nullable();
-            $table->integer('wallmart_id')->nullable();
-            $table->integer('target_id')->nullable();
+            $table->integer('p_id')->nullable();
+            
             
         });
         Schema::table('comments', function (Blueprint $table) {

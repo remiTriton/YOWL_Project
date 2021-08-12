@@ -8459,42 +8459,42 @@ section.u-image,
 }
 .u-expanded-width {
   width: 100% !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 @media (min-width: 1200px) {
   .u-expanded-width-xl {
     width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .u-expanded-width-lg {
     width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin-left: auto !important;
+  margin-right: auto !important;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .u-expanded-width-md {
     width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin-left: auto !important;
+  margin-right: auto !important;
   }
 }
 @media (min-width: 576px) and (max-width: 767px) {
   .u-expanded-width-sm {
     width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin-left: auto !important;
+  margin-right: auto !important;
   }
 }
 @media (max-width: 575px) {
   .u-expanded-width-xs {
     width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin-left: auto !important;
+  margin-right: auto !important;
   }
 }
 .u-preserve-proportions.u-expanded-width > * {
@@ -8777,7 +8777,7 @@ section.u-image,
   min-width: 95%;
 }
 .u-layout-col > .u-size-57 {
-  flex: 57 0 95%;
+  flex: 57 0 50%;
 }
 .u-layout-row > .u-size-56 {
   flex: 0 0 93.33333333%;
@@ -20633,7 +20633,7 @@ a.u-link.u-hover-color-2-dark-1:hover {
 .u-container-style.u-color-2:before,
 .u-table-alt-color-2 tr:nth-child(even) {
   color: #ffffff;
-  background-color: #db545a;
+  background-color: #254057;
 }
 .u-button-style.u-color-2,
 .u-button-style.u-color-2[class*="u-border-"] {
@@ -20837,7 +20837,7 @@ a.u-link.u-hover-color-2-light-3:hover {
 .u-container-style.u-color-2-base:before,
 .u-table-alt-color-2-base tr:nth-child(even) {
   color: #ffffff;
-  background-color: #db545a;
+  background-color: #254057;
 }
 .u-button-style.u-color-2-base,
 .u-button-style.u-color-2-base[class*="u-border-"] {
@@ -22673,7 +22673,7 @@ a.u-link.u-hover-palette-2-dark-1:hover {
 .u-container-style.u-palette-2:before,
 .u-table-alt-palette-2 tr:nth-child(even) {
   color: #ffffff;
-  background-color: #db545a;
+  background-color: #254057;
 }
 .u-button-style.u-palette-2,
 .u-button-style.u-palette-2[class*="u-border-"] {
@@ -22877,7 +22877,7 @@ a.u-link.u-hover-palette-2-light-3:hover {
 .u-container-style.u-palette-2-base:before,
 .u-table-alt-palette-2-base tr:nth-child(even) {
   color: #ffffff;
-  background-color: #db545a;
+  background-color: #254057;
 }
 .u-button-style.u-palette-2-base,
 .u-button-style.u-palette-2-base[class*="u-border-"] {
@@ -33805,7 +33805,7 @@ a.u-link.u-text-hover-grey-90:hover {
         .u-table-alt-custom-color-1 tr:nth-child(even)
         {
             color: #ffffff;
-            background-color: #417096;
+            background-color: #254057;
         }
 
         .u-button-style.u-custom-color-1,
@@ -33867,14 +33867,14 @@ a.u-link.u-text-hover-grey-90:hover {
         .u-table-alt-custom-color-2 tr:nth-child(even)
         {
             color: #ffffff;
-            background-color: #d67572;
+            background-color: #254057;
         }
 
         .u-button-style.u-custom-color-2,
         .u-button-style.u-custom-color-2[class*="u-border-"]
         {
             color: #ffffff !important;
-            background-color: #d67572 !important;
+            background-color: #254057 !important;
         }
 
         .u-button-style.u-custom-color-2:hover,
@@ -34768,7 +34768,7 @@ a.u-link.u-text-hover-grey-90:hover {
 
 .u-header .u-menu-1 {
   font-family: size-14;
-  margin: -38px 231px 0 auto;
+  margin: -37px 233px 0 auto;
 }
 
 .u-header .u-nav-1 {
@@ -34783,7 +34783,7 @@ a.u-link.u-text-hover-grey-90:hover {
 .u-header .u-btn-1 {
   border-style: none;
   align-self: center;
-  margin: -34px auto 0 0;
+  margin: -36px auto 0 0;
   padding: 0;
 }
 
@@ -34799,14 +34799,6 @@ a.u-link.u-text-hover-grey-90:hover {
     height: auto;
   }
 
-  .u-header .u-menu-1 {
-    margin-top: -38px;
-  }
-
-  .u-header .u-btn-1 {
-    margin-top: -34px;
-  }
-
   .u-header .u-image-1 {
     width: 59px;
     height: 59px;
@@ -34817,7 +34809,8 @@ a.u-link.u-text-hover-grey-90:hover {
 
 @media (max-width: 575px) {
   .u-header .u-menu-1 {
-    margin-right: 145px;
+    margin-top: 20px;
+    margin-right: 0;
   }
 }
 .u-footer {
