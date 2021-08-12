@@ -87,6 +87,8 @@ data(){
         'email':this.email,
         'password':this.password
       })
+
+      this.$router.push("/")
       console.log(this.email + this.password)
     }
   }

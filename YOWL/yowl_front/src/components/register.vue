@@ -171,6 +171,7 @@ export default {
         password: this.password,
         c_password: this.c_password,
       });
+          this.$router.push('login')
     },
   },
 };

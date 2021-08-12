@@ -8,12 +8,17 @@
         >Logout
       </router-link>
       <router-link to="Login" class="links" v-if="!isLogged">Login</router-link>
-      <router-link to="Register" class="links" v-if="!isLogged">Register</router-link>
+      <router-link to="Register" class="links" v-if="!isLogged"
+        >Register</router-link
+      >
       <router-link to="Product" class="links">Product</router-link>
-      <router-link to="crud" class="links" v-if="isLogged">Crud Com's</router-link>
-      <router-link to="adminuser" class="links" v-if="isLogged">Crud Users's</router-link>
+      <router-link to="crud" class="links" v-if="isLogged"
+        >Crud Com's</router-link
+      >
+      <router-link to="adminuser" class="links" v-if="isLogged"
+        >Crud Users's</router-link
+      >
       <router-link to="kpi" class="links" v-if="isLogged">KPI</router-link>
-
       <form class="search-box" @submit.prevent="onClick">
         <input
           type="search"
@@ -29,15 +34,16 @@
 </template>
 <script>
 // import { ref } from "vue";
-
+import { mapState } from "vuex";
 export default {
   name: "Header",
-  data (){
-    return{
-      query:'',
-    }
+  data() {
+    return {
+      query: "",
+    };
   },
   computed: {
+    ...mapState("comments", ["comments"]),
     animes() {
       return this.$store.state.api.animes;
     },
@@ -54,9 +60,9 @@ export default {
       this.$store.dispatch("users/logout");
     },
 
-    onClick() {
-      this.$store.dispatch("api/search", this.query);
-      this.$forceUpdate()
+   async onClick() {
+       await this.$store.dispatch("api/search", this.query);
+        // this.$store.dispatch("comments/fetchComments");
     },
   },
 };

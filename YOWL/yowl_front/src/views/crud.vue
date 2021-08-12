@@ -16,14 +16,14 @@
         </thead>
         <tbody>
           <tr v-for="com in comments" :key="com.id">
-                        <updateCom :com="com" />
+            <updateCom :com="com" />
 
             <td>{{ com.id }}</td>
             <td>{{ com.content }}</td>
             <td>{{ com.created_at }}</td>
-            <td><supress :id="com.id"  /></td>
+            <td><supress :id="com.id" /></td>
             <td>
-                <button
+              <button
                 type="button"
                 class="btn btn-outline-info btn-sm"
                 data-bs-toggle="modal"
@@ -46,11 +46,10 @@ import updateCom from "@/components/comments/updateCom.vue";
 import addCom from "@/components/comments/addCom.vue";
 export default {
   name: "crud",
-  components: 
-  {
+  components: {
     supress,
-  updateCom,
-  addCom
+    updateCom,
+    addCom,
   },
   methods: {},
   created() {

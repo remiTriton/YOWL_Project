@@ -38,7 +38,7 @@ const routes = [
     props: true,
   },
   {
-    path: '/DetailManga/:malId',
+    path: '/detailManga/:malId',
     name: 'detailManga',
     component: DetailManga,
     props: true,

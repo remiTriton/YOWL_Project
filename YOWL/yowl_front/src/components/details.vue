@@ -1,6 +1,6 @@
 <template>
   <body class="u-body">
-    <div v-for="comic in comics" :key="comic.id">
+    <div v-if="comics.length == 1">
       <section
         class="u-align-center u-clearfix u-custom-color-1 u-section-1"
         id="sec-fbec"
@@ -32,7 +32,7 @@
                     "
                     data-image-width="1552"
                     data-image-height="873"
-                    :src="comic.image.url"
+                    :src="comics[0].image.url"
                   /><!--/blog_post_image-->
                   <div
                     class="
@@ -47,7 +47,7 @@
                       <!--blog_post_header-->
                       <h2 class="u-align-center u-blog-control u-text u-text-1">
                         <a class="u-post-header-link" href="blog/post.html"
-                          ><!--blog_post_header_content-->{{ comic.name
+                          ><!--blog_post_header_content-->{{ comics[0].name
                           }}<!--/blog_post_header_content--></a
                         >
                       </h2>
@@ -63,7 +63,7 @@
                         <!--blog_post_metadata_date-->
                         <span class="u-meta-date u-meta-icon"
                           ><!--blog_post_metadata_date_content-->{{
-                            comic.appearance.race
+                            comics[0].appearance.race
                           }}<!--/blog_post_metadata_date_content--></span
                         ><!--/blog_post_metadata_date-->
                       </div>
@@ -72,20 +72,20 @@
                         <br />
                         <br />
                         <br />
-                        Full name : {{ comic.biography["full-name"]
+                        Full name : {{ comics[0].biography["full-name"]
                         }}<br /><br />
-                        Alter ego : {{ comic.biography["alter-ego"]
+                        Alter ego : {{ comics[0].biography["alter-ego"]
                         }}<br /><br />
-                        Aliases : {{ comic.biography.aliases.join()
+                        Aliases : {{ comics[0].biography.aliases.join()
                         }}<br /><br />
-                        Place of Birth : {{ comic.biography["place-of-birth"]
+                        Place of Birth : {{ comics[0].biography["place-of-birth"]
                         }}<br /><br />
                         First Appearance :{{
-                          comic.biography["first-appearance"]
+                          comics[0].biography["first-appearance"]
                         }}<br /><br />
-                        Publisher : {{ comic.biography["publisher"]
+                        Publisher : {{ comics[0].biography["publisher"]
                         }}<br /><br />
-                        Alignment : {{ comic.biography["alignement"]
+                        Alignment : {{ comics[0].biography["alignement"]
                         }}<br /><br />
                         <br />
                       </p>
@@ -96,19 +96,71 @@
             </div>
           </div>
         </div>
-        <div class="comments">
-          <div v-for="com in comments" :key="com.id">
-            <div v-for="user in users" :key="user.id">
-              <div v-if="com.amazon_id == comic.id">
-                <div v-if="com.user_id == user.id">
-                  <div class="author">{{ user.name }}</div>
-                  <div class="content">{{ com.content }}</div>
+  <!-- <div class="col-md-8 col-lg-6">
+    <div class="card shadow-0 border" style="background-color: #f0f2f5;">
+        <div v-for="com in comments" :key="com.id">
+          <div v-for="user in users" :key="user.id">
+            <div v-if="com.amazon_id == comics[0].mal_id">
+              <div class="cards" v-if="com.user_id == user.id">
+                <div class="card" style="width: 18rem">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ user.name }}</h5>
+                    <h6 class="card-subtitle mb-2">{{ com.created_at }}</h6>
+                    <p class="card-text">{{ com.content }}</p>
+                  </div>
+                  <div>
+                    <Supress :id="com.id" />
+                    <Update :com="com" />
+                    <button
+                      type="button"
+                      class="btn btn-success btn-sm"
+                      data-bs-toggle="modal"
+                      :data-bs-target="'#updateComments' + com.id"
+                    >
+                      U
+                    </button>
+                  </div>
                 </div>
+              </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <div v-for="com in comments" :key="com.id">
+          <div v-for="user in users" :key="user.id">
+            <div v-if="com.amazon_id == comics[0].id">
+              <div class="cards" v-if="com.user_id == user.id">
+         <div class="card mb-4">
+          <div class="card-body">
+              
+                <p>{{com.content}}</p>
+            <div class="d-flex justify-content-between">
+              <div class="d-flex flex-row align-items-center">
+              
+                <p class="small mb-0 ms-2">{{user.name }} - {{com.updated_at}}</p>
+              </div>
+              <div class="d-flex flex-row align-items-center">
+                 <Supress :id="com.id" />
+                    <Update :com="com" />
+                    <button
+                      type="button"
+                      class="btn btn-outline-light btn-sm"
+                      data-bs-toggle="modal"
+                      :data-bs-target="'#updateComments' + com.id"
+                    >
+                      ✎ 
+                    </button>
               </div>
             </div>
           </div>
         </div>
+           </div>
+            </div>
+          </div>
+        </div>
       </section>
+   
       <section
         class="u-align-center u-clearfix u-custom-color-3 u-section-2"
         id="sec-fca8"
@@ -189,8 +241,17 @@
 </template>
 
 <script>
+import Supress from "@/components/comments/supressOne.vue";
+import Update from "@/components/comments/updateOne.vue";
+import { mapState } from "vuex";
+
+
 export default {
   name: "details",
+  components: {
+    Supress,
+    Update,
+  }, 
   data() {
     return {
       content: "",
@@ -204,9 +265,7 @@ export default {
   },
 
   computed: {
-    comics() {
-      return this.$store.state.api.comics;
-    },
+    ...mapState('api', ['comics']),
     comments() {
       return this.$store.state.comments.comments;
     },
@@ -228,5 +287,33 @@ export default {
 <style scoped>
 @import url("../assets/css/Print.css");
 @import url("../assets/css/nicepage.css");
+.cards {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  
+}
+
+.card {
+  width:500px;
+  display: flex;
+  height:auto;
+box-shadow: 12px 12px 2px 1px #82B1FF;  background-color:#417096;
+}
+
+.card h5,
+p {
+  color: white;
+}
+
+.card h6 {
+  color: white;
+}
+
+.card button {
+  width: 30px;
+}
 </style>
 

@@ -27,7 +27,6 @@ Route::middleware('auth:api')->group( function () {
     Route::resource('comments', CommentController::class);
 
     Route::delete('/comment/{comment_id}', [CommentController::class, 'delete']);
-
     Route::delete('/comment/{comment_id}/admin', [CommentController::class, 'deleteCrud']);
     Route::delete('/register/{user_id}/delete', [RegisterController::class, 'delete']);
 

@@ -1,6 +1,5 @@
 <template>
   <body class="u-body">
-
     <section class="u-align-center u-clearfix u-section-1" id="carousel_c09b">
       <div
         class="
@@ -85,8 +84,8 @@
       id="carousel_eac4"
     >
       <div class="u-clearfix u-sheet u-sheet-1">
-        <h1 class="u-text u-text-1" style="color :white">Anime, Marvel&nbsp;<br /></h1>
-        <p class="u-custom-font u-font-pt-sans u-text u-text-2" style="color :white">
+        <h1 class="u-text u-text-1">Anime, Marvel&nbsp;<br /></h1>
+        <p class="u-custom-font u-font-pt-sans u-text u-text-2">
           “You can do anything you set your mind to.” <br />- Benjamin Franklin
         </p>
         <div
@@ -116,18 +115,14 @@
                   data-image-width="1024"
                   data-image-height="1024"
                 >
-               
-                    <img
-                      class="u-back-image u-expanded"
-                      :src="comic.image.url"
-                    />
+                  <img class="u-back-image u-expanded" :src="comic.image.url" />
                 </div>
               </router-link>
             </div>
 
             <div
               class="u-effect-fade u-effect-hover-zoom u-gallery-item"
-              v-for="anime in animes.splice(25, 3)"
+              v-for="anime in animes.splice(0, 3)"
               :key="anime.mal_id"
             >
               <router-link
@@ -140,17 +135,13 @@
                 >
                   <img class="u-back-image u-expanded" :src="anime.image_url" />
                 </div>
-                <div class="u-over-slide u-shading u-over-slide-4">
-                  <h3 class="u-gallery-heading"></h3>
-                  <p class="u-gallery-text"></p>
-                </div>
               </router-link>
             </div>
           </div>
         </div>
       </div>
     </section>
-  
+
     <section
       class="u-align-center u-clearfix u-custom-color-2 u-section-4"
       id="carousel_9527"
