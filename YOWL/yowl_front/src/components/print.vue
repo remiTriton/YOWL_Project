@@ -141,13 +141,7 @@ export default {
     users() {
       return this.$store.state.users.users;
     },
-  },methods:{
-  onClick() {
-      this.$store.dispatch("comments/comments"),
-        this.$store.dispatch("api/search", this.query),
-        this.$store.dispatch("comments/comments");
-    },}
-};
+  }}
 </script>
 
 <style scoped>

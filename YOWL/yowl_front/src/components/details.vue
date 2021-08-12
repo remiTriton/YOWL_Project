@@ -280,6 +280,8 @@ export default {
         content: this.content,
         amazon_id: this.comics[0].id,
       });
+              this.$router.go();
+
     },
   },
 };
