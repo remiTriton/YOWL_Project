@@ -581,12 +581,13 @@
       id="sec-402c"
     >
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <a href="#">
         <div
           class="u-image u-image-circle u-preserve-proportions u-image-1"
           alt=""
           data-image-width="800"
           data-image-height="800"
-        ></div>
+        ></div></a>
       </div>
     </footer>
     <section class="u-backlink u-clearfix u-grey-80">
@@ -616,12 +617,10 @@ export default {
     this.$store.dispatch("api/fetchComics");
     this.$store.dispatch("api/fetchAnimes");
   },
-
   computed: {
     comics() {
       return this.$store.state.api.comics;
     },
-
     animes() {
       return this.$store.state.api.animes;
     },
