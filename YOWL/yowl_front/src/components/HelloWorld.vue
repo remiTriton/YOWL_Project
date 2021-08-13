@@ -84,8 +84,8 @@
       id="carousel_eac4"
     >
       <div class="u-clearfix u-sheet u-sheet-1">
-        <h1 class="u-text u-text-1">Anime, Marvel&nbsp;<br /></h1>
-        <p class="u-custom-font u-font-pt-sans u-text u-text-2">
+        <h1 class="u-text u-text-1" id="anime">Anime, Marvel&nbsp;<br /></h1>
+        <p class="u-custom-font u-font-pt-sans u-text u-text-2" id="anime">
           “You can do anything you set your mind to.” <br />- Benjamin Franklin
         </p>
         <div
@@ -633,4 +633,8 @@ export default {
 <style>
 @import url("../assets/css/Home.css");
 @import url("../assets/css/nicepage.css");
+
+#anime{
+  color:white;
+}
 </style>
