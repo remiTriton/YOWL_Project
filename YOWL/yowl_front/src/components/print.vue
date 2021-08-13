@@ -1,5 +1,6 @@
 <template>
   <body class="u-body">
+
     <section
       class="
         u-align-center
@@ -35,12 +36,13 @@
                 Publisher : {{ comic.biography["publisher"] }}<br /><br />
                 Alignment : {{ comic.biography["alignement"] }}<br /><br />
               </p>
-              <div v-for="com in comments.splice(0, 4)" :key="com.id">
+              <div v-for="com in comments" :key="com.id">
                 <div v-for="user in users" :key="user.id">
                   <div v-if="com.amazon_id == comic.id">
                     <div class="cardss" v-if="com.user_id == user.id">
                       <div class="carda mb-4">
                         <div class="card-body">
+
                           <p>{{ com.content }}</p>
                           <div class="d-flex justify-content-between">
                             <div class="d-flex flex-row align-items-center">
@@ -79,7 +81,7 @@
               <p class="p">
                 {{ anime.synopsis }}
               </p>
-               <div v-for="com in comments.splice(0, 4)" :key="com.id">
+               <div v-for="com in comments" :key="com.id">
                 <div v-for="user in users" :key="user.id">
                   <div v-if="com.wallmart_id == anime.mal_id">
                     <div class="cardss" v-if="com.user_id == user.id">
@@ -117,8 +119,7 @@ export default {
   name: "print",
   data() {
     return {
-      content: "",
-      amazon_id: "",
+     com :{},
     };
   },
 

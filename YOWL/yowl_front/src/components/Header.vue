@@ -77,12 +77,15 @@ export default {
 }
 
 .header {
+  flex-wrap:wrap;
   display: flex;
   justify-content: space-between;
   margin-left: 5px;
   margin-bottom: 25px;
 }
 .linksto {
+    flex-wrap:wrap;
+
   display: flex;
   padding: 25px;
 }
