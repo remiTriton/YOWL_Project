@@ -8455,7 +8455,7 @@ section.u-image,
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
 }
 .u-expanded-width {
   margin-left: auto !important;
@@ -18358,8 +18358,8 @@ a.pswp__share--download:hover {
   background-repeat: no-repeat;
 }
 .u-back-image {
-  height: 100%;
-  width: 100%;
+  /* height: 100%; */
+  /* width: 100%; */
   object-fit: cover;
   object-position: center;
 }
@@ -18703,7 +18703,7 @@ a.pswp__share--download:hover {
 .u-layout-grid .u-gallery-inner {
   display: grid;
   grid-template-columns: repeat(3, auto);
-  min-height: 100%;
+  min-height: 10%;
 }
 .u-layout-thumbnails,
 .u-layout-carousel {

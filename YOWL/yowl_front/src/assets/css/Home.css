@@ -4,7 +4,7 @@
 
 .u-section-1 .u-image-1 {
   width: auto;
-  height: 506px;
+  height: auto;
   margin: 17px auto 0;
 }
 
@@ -36,8 +36,8 @@
   }
 
   .u-section-1 .u-image-1 {
-    height: 452px;
-    width: 1040px;
+    height: auto;
+    width: auto;
     margin-top: 0;
     margin-left: -50px;
     margin-right: -50px;
@@ -76,8 +76,8 @@
   }
 
   .u-section-1 .u-image-1 {
-    height: 313px;
-    width: 720px;
+    height: auto;
+    width: auto;
     margin-left: 0;
     margin-right: 0;
   }
@@ -110,8 +110,8 @@
   }
 
   .u-section-1 .u-image-1 {
-    height: 235px;
-    margin-top: 230px;
+    height: auto;
+    margin-top: auto;
     width: 540px;
   }
 
@@ -139,8 +139,8 @@
   }
 
   .u-section-1 .u-image-1 {
-    height: 374px;
-    width: 440px;
+    height: auto;
+    width: auto;
     margin-top: -10px;
     margin-left: -50px;
     margin-right: -50px;
@@ -331,8 +331,8 @@
   }
 
   .u-section-2 .u-gallery-1 {
-    height: 915px;
-    width: 940px;
+    height: auto;
+    width: auto;
   }
 
   .u-section-2 .u-gallery-inner-1 {
@@ -381,8 +381,8 @@
   }
 
   .u-section-2 .u-gallery-1 {
-    height: 1577px;
-    width: 720px;
+    height: auto;
+    width: auto;
   }
 
   .u-section-2 .u-gallery-inner-1 {
@@ -446,8 +446,8 @@
   }
 
   .u-section-2 .u-gallery-1 {
-    height: 4731px;
-    width: 540px;
+    height: auto;
+    width: 340px;
   }
 
   .u-section-2 .u-gallery-inner-1 {

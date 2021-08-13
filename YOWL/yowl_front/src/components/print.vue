@@ -25,7 +25,7 @@
               /></router-link>
             </div>
             <div class="card-body">
-              <h5 class="card-title">{{ comic.biography["full-name"] }}</h5>
+              <h5 class="card-title">{{ comic.name }}</h5>
               <p class="p">
                 Alter ego : {{ comic.biography["alter-ego"] }}<br /><br />
                 Aliases : {{ comic.biography.aliases.join() }}<br /><br />
